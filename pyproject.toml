@@ -1,0 +1,38 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
+
+[tool.poetry]
+name = "konectu"
+version = "1.1.19"
+description = "automation code generation from text instructions"
+authors = ["konectu-ai"]
+readme = "README.md"
+license = "Apache-2.0"
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Software Development :: Libraries :: Application Frameworks",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "License :: OSI Approved :: Apache Software License",
+]
+keywords = ["LAM", "action", "automation", "LLM", "NLP", "RAG", "selenium", "playwright"]
+homepage = "https://mithrilsecurity.io"
+repository = "https://github.com/konectu-ai/konectu/"
+documentation = "https://docs.konectu.ai/en/latest/"
+packages = [{from = "_konectu", include = "konectu"}]
+
+[tool.poetry.dependencies]
+python = "^3.10.0"
+konectu-core = "^0.2.31"
+konectu-drivers-selenium = "^0.2.12"
+konectu-contexts-openai = "^0.2.0"
+konectu-gradio = "^0.2.8"
+
+[tool.poetry.dev-dependencies]
+ruff = "^0.2.2"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.4"
+
