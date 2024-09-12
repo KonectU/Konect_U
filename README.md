@@ -1,4 +1,3 @@
-
 # Konectu Telemetry Data Collection 📈
 
 ## Overview
@@ -36,7 +35,7 @@ To create a robust and useful dataset, Konectu collects the following telemetry 
 3. **Collaborative AI Research**: By sharing this data on platforms like HuggingFace, we foster an environment of open collaboration with the AI community, accelerating progress in AI model development.
 4. **Personalization & User Experience**: Understanding user actions and objectives helps improve and personalize user interactions with Konectu.
 
-
+a
 
 ## Data Usage & Privacy
 
