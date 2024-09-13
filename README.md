@@ -13,7 +13,7 @@ Konectu Agents are made up of:
 
 
 ### Konectu QA: Dedicated tooling for QA Engineers
-**🌊 Built on Konectu**
+** Built on Konectu**
 
 Konectu QA is a tool tailored for QA engineers leveraging our framework. 
 
@@ -62,7 +62,7 @@ If you want to install from source, you can do so by cloning the repo and runnin
 ```
 
 
-## 📈 Data collection
+## Data collection
 
 We want to build a dataset that can be used by the AI community to build better Large Action Models for better Web Agents. 
 
