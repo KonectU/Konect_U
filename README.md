@@ -1,6 +1,6 @@
 
 
-## Konect u 
+## Konectu 
 
 Konectu is an open-source framework designed for developers who want to create AI Web Agents to automate processes for their end users.
 
