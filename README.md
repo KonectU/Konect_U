@@ -1,67 +1,90 @@
-# Konectu Telemetry Data Collection 📈
 
-## Overview
 
-At Konectu, we aim to build a dataset that can be used by the AI community to develop better Large Action Models (LAMs) for improving Web Agents. These datasets help refine and create more intelligent web automation tools. You can find our ongoing work on the [BigAction HuggingFace page](https://huggingface.co/BigAction).
+## Konectu 
 
-This README outlines the data we collect from users, how it contributes to our mission, and the potential consequences of this data collection.
+Konectu is an open-source framework designed for developers who want to create AI Web Agents to automate processes for their end users.
 
-## Data Collected by Konectu
+Our Web Agents can take an objective, such as "Print installation steps for Hugging Face's Diffusers library," and generate and perform the actions required to achieve the objective.
 
-To create a robust and useful dataset, Konectu collects the following telemetry data by default:
+Konectu Agents are made up of:
 
-- **Version of Konectu installed**: The version of the software being used.
-- **Code / List of actions generated for each web action step**: The actions performed by the agent in interacting with web pages.
-- **The past actions**: A history of previous actions taken during a session.
-- **The "observations"**: The method used to check the current state of the webpage (e.g., DOM analysis).
-- **LLM used**: The type of language model utilized (e.g., GPT-4).
-- **Multi-modal LLM used**: If a multi-modal model is used (e.g., GPT-4 multimodal), this will be recorded.
-- **Randomly generated anonymous user ID**: A unique, non-identifiable ID is assigned to each user session.
-- **Interface type**: Whether you are using a CLI command (`konectu-qa` for example), the Gradio demo, or our library directly.
-- **The objective used**: The task or objective the agent is working towards (e.g., form submission, data extraction).
-- **The chain of thoughts on the agent**: The reasoning process behind the agent’s decisions (also known as chain-of-thoughts).
-- **The interaction zone on the page**: The specific area on the webpage the agent interacted with (bounding box).
-- **The viewport size of your browser**: The dimensions of the user's browser window.
-- **The current step**: The specific step the agent is performing in the task sequence.
-- **The instruction(s) generated & the current engine used**: The generated instructions and the engine currently driving the interaction.
-- **Token costs & usages**: Data related to token consumption, which includes cost and usage metrics.
+- A World Model that takes an objective and the current state (aka the current web page) and outputs an appropriate set of instructions.
+- An Action Engine which “compiles” these instructions into action code, e.g., Selenium or Playwright & executes them
 
-## Consequences of Data Collection
 
-### Positive Consequences
+### Konectu QA: Dedicated tooling for QA Engineers
+**🌊 Built on Konectu**
 
-1. **Advancement of AI Development**: By collecting this data, we are contributing to the development of Large Action Models (LAMs) that can automate complex web interactions more effectively.
-2. **Improved Web Agents**: These datasets will help improve the accuracy and intelligence of Web Agents, leading to more capable and efficient systems.
-3. **Collaborative AI Research**: By sharing this data on platforms like HuggingFace, we foster an environment of open collaboration with the AI community, accelerating progress in AI model development.
-4. **Personalization & User Experience**: Understanding user actions and objectives helps improve and personalize user interactions with Konectu.
+Konectu QA is a tool tailored for QA engineers leveraging our framework. 
 
-a
+It allows you to automate test writing by turning Gherkin specs into easy-to-integrate tests. Konectu QA is a project leveraging the Konectu framework behind the scenes to make web testing 10x more efficient.
 
-## Data Usage & Privacy
+## Key Features
 
-We strive to balance the need for data to improve our models with the privacy and security concerns of our users. The data collected is used **solely for the purpose of improving Web Agents and Large Action Models**, and it is shared with the AI community only in a manner that respects user anonymity.
+- ✅ [Built-in Contexts]
+- ✅ [Customizable configuration]
+- ✅ [A test runner]
+- ✅ A [Token Counter]
+- ✅ [Logging tools]
+- ✅ [Gradio interface]
+- ✅ [Debugging tools]
+- ✅ [A Chrome Extension]
 
-### Key Principles
 
-- **Anonymization**: We ensure all data is tied to a randomly generated anonymous user ID.
-- **Transparency**: Users are informed about what data is collected and how it is used.
-- **Data Minimization**: We only collect the data necessary to improve Web Agents and LAMs.
-- **Security**: All collected data is stored securely and handled with strict security protocols.
+## Key Benefits
 
-## Opt-Out
+* Faster test creation: generate Pytest code directly from test scenarios by leveraging LaVague Agents.
+* Reduced maintenance: AI element selection adapts to UI changes, lowering the upkeeping needed when the site changes.
 
-Currently, data collection is enabled by default, but we are working on mechanisms that allow users to **opt out** of data collection. Stay tuned for updates on this.
+## Installation
+Installing the latest release
+You can install the latest release of Konectu with the following command:
 
-## Getting Started 🚀
+''' pip install Konectu '''
 
-To get started with Konectu, check out our documentation and usage guides. Once you have installed Konectu, telemetry data will be collected as outlined above, contributing to the improvement of AI systems.
+This will install a core bundle of Konectu packages required for usage of Konectu with default configurations - you can see which packages are included in this bundle in out pyproject.toml file at the root of our repo.
 
-For more information, visit our [BigAction HuggingFace page](https://huggingface.co/BigAction).
+Optional Konectu packages
 
----
+If you want to use packages not included in our default bundle, you will need to manually install the relevant package.
 
-Thank you for contributing to the advancement of AI and Web Agents! Your interactions with Konectu help us build better systems for everyone.
+For example, if you want to use a non-default context such as the Gemini context. You would need to run:
 
-## License
 
-Konectu is open-source software. See the [LICENSE](LICENSE) file for more information.
+''' pip install Konectu.contexts.gemini '''
+
+## Installing from source
+If you want to install from source, you can do so by cloning the repo and running the following command from the root of the repo:
+
+
+''' pip install -e . '''
+
+
+
+## 📈 Data collection
+
+We want to build a dataset that can be used by the AI community to build better Large Action Models for better Web Agents. 
+
+This is why Konectu collects the following user data telemetry by default:
+
+- Version of Konectu installed
+- Code / List of actions generated for each web action step
+- The past actions
+- The "observations" (method used to check the current page)
+- LLM used (i.e GPT4)
+- Multi modal LLM used (i.e GPT4)
+- Randomly generated anonymous user ID
+- Whether you are using a CLI command (Konectu-qa for example), the Gradio demo or our library directly.
+- The objective used 
+- The chain of thoughts on the agent
+- The interaction zone on the page (bounding box)
+- The viewport size of your browser
+- The current step
+- The instruction(s) generated & the current engine used
+- The token costs & usages
+- The URL you performed an action on
+- Whether the action failed or succeeded
+- The extra used data specified
+- Error message, where relevant
+- The source nodes (chunks of HTML code retrieved from the web page to perform this action)
+
