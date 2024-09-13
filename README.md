@@ -39,8 +39,8 @@ It allows you to automate test writing by turning Gherkin specs into easy-to-int
 ## Installation
 Installing the latest release
 You can install the latest release of Konectu with the following command:
-
-'''bash pip install konectu
+ 
+ pip install konectu
 
 This will install a core bundle of Konectu packages required for usage of Konectu with default configurations - you can see which packages are included in this bundle in out pyproject.toml file at the root of our repo.
 
@@ -51,7 +51,6 @@ If you want to use packages not included in our default bundle, you will need to
 For example, if you want to use a non-default context such as the Gemini context. You would need to run:
 
 
-'''bash
  pip install Konectu.contexts.gemini 
  
 
@@ -59,7 +58,6 @@ For example, if you want to use a non-default context such as the Gemini context
 If you want to install from source, you can do so by cloning the repo and running the following command from the root of the repo:
 
 
-'''bash
  pip install -e .
 
 
