@@ -22,13 +22,12 @@ It allows you to automate test writing by turning Gherkin specs into easy-to-int
 ## Key Features
 
 - ✅ [Built-in Contexts]
-- ✅ [Customizable configuration]
 - ✅ [A test runner]
 - ✅ A [Token Counter]
 - ✅ [Logging tools]
 - ✅ [Gradio interface]
 - ✅ [Debugging tools]
-- ✅ [A Chrome Extension]
+
 
 
 ## Key Benefits
